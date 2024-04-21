@@ -7,6 +7,7 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import CustomizedTables from './CustomizedTables';
 
+
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -31,10 +32,10 @@ const AccordionSummary = styled((props) => (
   backgroundColor:
     theme.palette.mode === 'dark'
       ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+      : 'white',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    transform: 'rotate(90deg)',
+    transform: 'rotate(270deg)',
   },
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
@@ -77,6 +78,7 @@ export default function CustomizedAccordions({data}) {
             key={assetCls} 
             expanded={expanded.includes(assetCls)} 
             onChange={handleChange(assetCls)}
+           
           >
             <AccordionSummary  aria-controls={`${assetCls}-content`} id={`${assetCls}-header`}>
               <Typography sx={{ fontWeight: 'bold' }}>{assetCls} ({datas.length})</Typography>

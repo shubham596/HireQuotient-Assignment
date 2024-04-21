@@ -8,13 +8,18 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.white,
-    color: theme.palette.grey[700],
+    color: theme.palette.grey[500],
+    Height:"30px",
+    fontSize:"13px",
+    fontWeight: "bold",
   },
   [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
+    fontSize: "12px",
+   
   },
 }));
 
@@ -25,7 +30,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
  
   '&:last-child td, &:last-child th': {
     border: 0,
+    
   },
+  
 }));
 
 
